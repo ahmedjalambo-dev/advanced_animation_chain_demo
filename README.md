@@ -12,6 +12,10 @@ This Flutter project is a demonstration of an advanced animation chain. It was c
 
 This preview shows the final loading animation in action.
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/c214355a-072b-49b6-a70b-205c88891403" alt="App Demo GIF" width="250" />
+</p>
+
 -----
 
 ## ✨ Challenge Requirements Met
