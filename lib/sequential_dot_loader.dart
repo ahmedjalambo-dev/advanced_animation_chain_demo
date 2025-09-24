@@ -23,16 +23,16 @@ class _SequentialDotLoaderState extends State<SequentialDotLoader>
     // 1. Initialize the AnimationController
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1200),
+      duration: const Duration(milliseconds: 900),
     );
 
     // 2. Define the Tween animations using Intervals to create the sequence
 
     // Dot 1: Animates in the first part of the controller's timeline (0% to 50%)
-    _scale1 = Tween<double>(begin: 1.0, end: 1.5).animate(
+    _scale1 = Tween<double>(begin: 0.5, end: 1.5).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: const Interval(0.0, 0.5, curve: Curves.easeInOut),
+        curve: const Interval(0.0, 0.5, curve: Curves.easeIn),
       ),
     );
     _opacity1 = Tween<double>(begin: 0.5, end: 1.0).animate(
@@ -43,10 +43,10 @@ class _SequentialDotLoaderState extends State<SequentialDotLoader>
     );
 
     // Dot 2: Animates in the middle part (20% to 70%)
-    _scale2 = Tween<double>(begin: 1.0, end: 1.5).animate(
+    _scale2 = Tween<double>(begin: 0.5, end: 1.5).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: const Interval(0.2, 0.7, curve: Curves.easeInOut),
+        curve: const Interval(0.2, 0.7, curve: Curves.easeIn),
       ),
     );
     _opacity2 = Tween<double>(begin: 0.5, end: 1.0).animate(
@@ -57,10 +57,10 @@ class _SequentialDotLoaderState extends State<SequentialDotLoader>
     );
 
     // Dot 3: Animates in the last part (40% to 90%)
-    _scale3 = Tween<double>(begin: 1.0, end: 1.5).animate(
+    _scale3 = Tween<double>(begin: 0.5, end: 1.5).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: const Interval(0.4, 0.9, curve: Curves.easeInOut),
+        curve: const Interval(0.4, 0.9, curve: Curves.easeIn),
       ),
     );
     _opacity3 = Tween<double>(begin: 0.5, end: 1.0).animate(
